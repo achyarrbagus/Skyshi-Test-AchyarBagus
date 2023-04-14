@@ -24,7 +24,7 @@ func main() {
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 		AllowOrigins: []string{"*"},
 		AllowMethods: []string{echo.GET, echo.POST, echo.PATCH, echo.DELETE},
-		AllowHeaders: []string{"X-Requested-With", "Content-Type"},
+		AllowHeaders: []string{"X-Requested-With", "Content-Type", "Authorization"},
 	}))
 
 	routes.RouteInit(e.Group("/todolist.api.devcode.gethired.id"))
